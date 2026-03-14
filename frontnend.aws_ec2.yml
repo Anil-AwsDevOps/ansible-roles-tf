@@ -1,0 +1,35 @@
+# plugin: amazon.aws.aws_ec2 #plugin to aws ec2 instance
+# regions: # it lists all instance present in us-east-1 region
+# - us-east-1
+# hostnames:
+#   # This option allows displaying the public ip addresses.
+#   - private-ip-address
+  
+# filters:
+#   # This selects only running instances with tag `Name` tag set to `frontend-dev`.
+#   tag:Name: frontend-dev
+#   instance-state-name : running
+
+# compose:
+#   # This sets the ansible_host variable to connect with the private IP address without changing the hostname.
+#   ansible_host: private_ip_address
+
+# keyed_groups:
+# - key: tags.Component
+#   separator: ''
+
+plugin: amazon.aws.aws_ec2
+regions:
+- us-east-1
+hostnames:
+- private-ip-address
+filters:
+  instance-state-name : running
+  tag:Name: frontend-dev
+compose:
+  # This sets the ansible_host variable to connect with the private IP address without changing the hostname.
+  ansible_host: private_ip_address
+keyed_groups:
+- separator: ''
+  # name of the group is frontend
+  key: tags.Name | regex_replace('-.*$', '')

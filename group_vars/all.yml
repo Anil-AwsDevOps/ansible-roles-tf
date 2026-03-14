@@ -1,0 +1,13 @@
+
+
+ansible_user: ec2-user
+ansible_password: DevOps321
+MONGODB_HOST: mongodb-dev.anilbeeraka.online
+CATALOGUE_HOST: catalogue-dev.anilbeeraka.online
+REDIS_HOST: redis-dev.anilbeeraka.online
+USER_HOST: user-dev.anilbeeraka.online
+CART_HOST: cart-dev.anilbeeraka.online
+MYSQL_HOST: mysql-dev.anilbeeraka.online
+SHIPPING_HOST: shipping-dev.anilbeeraka.online
+RABBITMQ_HOST: rabbitmq-dev.anilbeeraka.online
+PAYMENT_HOST: payment-dev.anilbeeraka.online
