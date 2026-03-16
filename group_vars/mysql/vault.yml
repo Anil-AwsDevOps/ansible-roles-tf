@@ -1,4 +1,6 @@
 
-MYSQL_ROOT_PASSWORD: "{{ (lookup('amazon.aws.aws_secret', 'prod/roboshop/mysql',region='us-east-1') |  from_json).MYSQL_ROOT_PASSWORD }}"
+MYSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql', region='us-east-1', decrypt=True) }}"
 
-# "{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql', region='us-east-1', decrypt=True) }}"
+#"{{ (lookup('amazon.aws.aws_secret', 'prod/roboshop/mysql',region='us-east-1') |  from_json).MYSQL_ROOT_PASSWORD }}"
+
+# 
