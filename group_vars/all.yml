@@ -3,12 +3,12 @@
 ansible_user: ec2-user
 ansible_password: DevOps321
 MONGODB_HOST: mongodb-{{ env }}.anilbeeraka.online
-CATALOGUE_HOST: catalogue-{{ env }}.anilbeeraka.online
+CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.anilbeeraka.online
 REDIS_HOST: redis-{{ env }}.anilbeeraka.online
-USER_HOST: user-{{ env }}.anilbeeraka.online
-CART_HOST: cart-{{ env }}.anilbeeraka.online
+USER_HOST: user.backend-alb-{{ env }}.anilbeeraka.online
+CART_HOST: cart.backend-alb-{{ env }}.anilbeeraka.online
 MYSQL_HOST: mysql-{{ env }}.anilbeeraka.online
-SHIPPING_HOST: shipping-{{ env }}.anilbeeraka.online
+SHIPPING_HOST: shipping.backend-alb-{{ env }}.anilbeeraka.online
 RABBITMQ_HOST: rabbitmq-{{ env }}.anilbeeraka.online
-PAYMENT_HOST: payment-{{ env }}.anilbeeraka.online
+PAYMENT_HOST: payment.backend-alb-{{ env }}.anilbeeraka.online
 app_version: v3
